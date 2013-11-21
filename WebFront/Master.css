@@ -1,0 +1,11 @@
+﻿body {
+    
+}
+
+#title{
+    font-size: 25px;
+    border-bottom: medium;
+    border-bottom-color: #FF0000;
+    border-bottom-width: thick;
+    margin-bottom: 20px;
+}

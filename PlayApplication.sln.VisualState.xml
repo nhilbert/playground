@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\Users\norman.hilbert\Documents\Visual Studio 2013\Projects\PlayApplication\PlayApplication.sln</TopNode>
+  <SelectedNode>[0-1006]PlayApplication.Tests.MigratableObjectPresenterTest.Migration_Updates_View</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\Users\norman.hilbert\Documents\Visual Studio 2013\Projects\PlayApplication\PlayApplication.sln" Expanded="true" />
+    <Node UniqueName="[0-1011]C:\Users\norman.hilbert\Documents\Visual Studio 2013\Projects\PlayApplication\PlayApplication.Tests\bin\Debug\PlayApplication.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1012]PlayApplication" Expanded="true" />
+    <Node UniqueName="[0-1013]PlayApplication.Tests" Expanded="true" />
+    <Node UniqueName="[0-1001]PlayApplication.Tests.DinosaurTest" Expanded="true" />
+    <Node UniqueName="[0-1004]PlayApplication.Tests.MigratableObjectPresenterTest" Expanded="true" />
+  </Nodes>
+</VisualState>
