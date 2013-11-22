@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using Ninject;
 using Ninject.Modules;
-using WebFront.model;
+using Playground.Model;
 
-namespace WebFront.presentation
+namespace Playground.Presentation
 {
     public class MigObjectModule:NinjectModule
     {

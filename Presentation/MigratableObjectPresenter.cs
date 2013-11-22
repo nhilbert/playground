@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebFront.model;
+using Playground.Model;
 using Ninject;
-using Moq;
 using System.Diagnostics;
 
-namespace WebFront.presentation
+namespace Playground.Presentation
 {
     /// <summary>
     /// A class to present a Dino to the VIEW (i.e. the ASPX)

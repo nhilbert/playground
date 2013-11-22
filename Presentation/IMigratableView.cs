@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebFront.model
+namespace Playground.Presentation
 {
-    public interface IMigratable
+    public interface IMigratableView
     {
-        bool migrated { get; set; }
-        void Migrate();
+        Boolean Migrated { get; set; }
     }
 }

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
-namespace WebFront
+namespace Playground.DataAccessTest
 {
-    public interface IMigratableView
+    [TestFixture]
+    public class DinoPickerTest
     {
-        Boolean Migrated { get; set; }
     }
 }

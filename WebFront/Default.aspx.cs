@@ -5,12 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Ninject;
-using WebFront.presentation;
-using WebFront.model;
+using Playground.Presentation;
+using Playground.Model;
 using System.Configuration;
 
 
-namespace WebFront
+namespace Playground.WebFront
 {
     public partial class Default : System.Web.UI.Page, IMigratableView
     {
