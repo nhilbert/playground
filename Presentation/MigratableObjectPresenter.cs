@@ -34,15 +34,32 @@ namespace Playground.Presentation
 
 
         /// <summary>
-        /// Public Constructor
+        /// Public Constructor, showing a certain object
         /// </summary>
         [Inject]
         public MigratableObjectPresenter(IMigratableView migView, IMigratable migObject)
         {
+
             migratableObject = migObject;
             _migView = migView;
             this.Sync();
         }
+
+
+
+        /// <summary>
+        /// Public Constructor, creating a new migratable object
+        /// </summary>
+        [Inject]
+        public MigratableObjectPresenter(IMigratableView migView)
+        {
+            //Setup everything on page load, i.e. create an object to migrate
+            var kernel = new StandardKernel(new MigObjectModule());
+             migratableObject = kernel.Get<IMigratable>();
+            _migView = migView;
+            this.Sync();
+        }
+
 
 
 

@@ -6,7 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Ninject;
 using Playground.Presentation;
-using Playground.Model;
 using System.Configuration;
 
 
@@ -18,12 +17,10 @@ namespace Playground.WebFront
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Setup everything on page load, i.e. create an object to migrate
-            var kernel = new StandardKernel(new MigObjectModule());
-            var mObjModel = kernel.Get<IMigratable>();
+
 
             //create a presentation for the object generated
-            myPresentation = new MigratableObjectPresenter(this, mObjModel);
+            myPresentation = new MigratableObjectPresenter(this);
         }
 
         protected void MigrationButtonClick(object sender, EventArgs e)
