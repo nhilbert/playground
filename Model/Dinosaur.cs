@@ -17,6 +17,9 @@ namespace Playground.Model
             set;
         }
 
+        public string name { get; set; }
+        public string imageURL { get; set; }
+
         public void Migrate()
         {
             migrated = true;

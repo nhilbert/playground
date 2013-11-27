@@ -10,5 +10,7 @@ namespace Playground.Model
     {
         bool migrated { get; set; }
         void Migrate();
+        string name { get; set; }
+        string imageURL { get; set; }
     }
 }

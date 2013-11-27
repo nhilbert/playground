@@ -30,7 +30,7 @@ namespace Playground.Tests
             migratableViewMock.Setup(foo => foo.Migrated).Returns(false); //it is showing "unmigrated"
             IMigratableView migObjectView = migratableViewMock.Object;
 
-            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObjectView, migObject); //create the presenter to test
+            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObject); //create the presenter to test
            
             Assert.AreEqual(false,myMigObjPresenter.isMigrated);
 
@@ -49,7 +49,7 @@ namespace Playground.Tests
             migratableViewMock.SetupProperty(f => f.Migrated);
             IMigratableView migObjectView = migratableViewMock.Object;
 
-            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObjectView, migObject); //create the presenter to test
+            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObject); //create the presenter to test
 
             myMigObjPresenter.Migrate();
 
@@ -71,7 +71,7 @@ namespace Playground.Tests
             migratableViewMock.SetupProperty(f => f.Migrated);
             IMigratableView migObjectView = migratableViewMock.Object;
 
-            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObjectView, migObject); //create the presenter to test
+            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObject); //create the presenter to test
             Console.WriteLine("Created Presenter, calling Migrate()");
             myMigObjPresenter.Migrate();
 
@@ -91,7 +91,8 @@ namespace Playground.Tests
             migratableViewMock.SetupProperty(f => f.Migrated);
             IMigratableView migObjectView = migratableViewMock.Object;
 
-            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObjectView, migObject); //create the presenter to test
+            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObject); //create the presenter to test
+            myMigObjPresenter.RegisterView(migObjectView);
             myMigObjPresenter.LoadFromModel();
             Assert.AreEqual(false, myMigObjPresenter.isMigrated);
             migObject.migrated = true;
@@ -116,7 +117,7 @@ namespace Playground.Tests
             IMigratableView migObjectView = migratableViewMock.Object;
 
             Console.WriteLine("Setting up");
-            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObjectView, migObject); //create the presenter to test
+            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObject); //create the presenter to test
             Assert.AreEqual(false, myMigObjPresenter.isMigrated, "Setup");
             Console.WriteLine("Set up done.");
             myMigObjPresenter.isMigrated = true;
@@ -142,7 +143,7 @@ namespace Playground.Tests
             IMigratableView migObjectView = migratableViewMock.Object;
 
             Console.WriteLine("Setting up");
-            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObjectView, migObject); //create the presenter to test
+            MigratableObjectPresenter myMigObjPresenter = new MigratableObjectPresenter(migObject); //create the presenter to test
             Assert.AreEqual(false, myMigObjPresenter.isMigrated, "Setup");
             Console.WriteLine("Set up done.");
             myMigObjPresenter.isMigrated = true;

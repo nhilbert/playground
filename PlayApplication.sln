@@ -18,9 +18,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentatio
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{45322CB4-AB95-4304-B101-4339026FAD3B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{507E900E-BDEC-4D20-92EB-0A51266D0868} = {507E900E-BDEC-4D20-92EB-0A51266D0868}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessTest", "DataAccessTest\DataAccessTest.csproj", "{C50007D0-1148-4263-9D41-EE4D75A88EDF}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -36,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationTest", "Present
 	ProjectSection(ProjectDependencies) = postProject
 		{E641539E-D201-4C86-8DB4-07AAEC784AF9} = {E641539E-D201-4C86-8DB4-07AAEC784AF9}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLDataAccess", "MSSQLDataAccess\MSSQLDataAccess.csproj", "{06DF1856-5CDB-4A82-9329-A269B2754962}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +70,10 @@ Global
 		{1E55FF73-2A52-4A0C-A66B-83394B447366}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E55FF73-2A52-4A0C-A66B-83394B447366}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E55FF73-2A52-4A0C-A66B-83394B447366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06DF1856-5CDB-4A82-9329-A269B2754962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06DF1856-5CDB-4A82-9329-A269B2754962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06DF1856-5CDB-4A82-9329-A269B2754962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06DF1856-5CDB-4A82-9329-A269B2754962}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

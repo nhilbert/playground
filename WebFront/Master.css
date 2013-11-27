@@ -9,3 +9,15 @@
     border-bottom-width: thick;
     margin-bottom: 20px;
 }
+
+
+#DinoImage{
+    height:100px;
+    width:100px;
+}
+
+#DinoCardDiv{
+    width:120px;
+    height:150px;
+    border-style:solid;
+}

@@ -13,14 +13,12 @@ namespace Playground.WebFront
 {
     public partial class Default : System.Web.UI.Page, IMigratableView
     {
-        MigratableObjectPresenter myPresentation;
+        [Inject] 
+        public IMigratableObjectPresenter myPresentation{get; set;}
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-            //create a presentation for the object generated
-            myPresentation = new MigratableObjectPresenter(this);
+            myPresentation.RegisterView(this);
         }
 
         protected void MigrationButtonClick(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace Playground.Presentation
     /// it provides functionality to the view and support synchronisation with the model
     /// that is the actual dinos
     /// </summary>
-    public class MigratableObjectPresenter
+    public class MigratableObjectPresenter:IMigratableObjectPresenter
     {
         /// <summary>
         /// the Migration-Object to present
@@ -33,32 +33,26 @@ namespace Playground.Presentation
         protected Boolean _migrated;
 
 
+
+
         /// <summary>
         /// Public Constructor, showing a certain object
         /// </summary>
         [Inject]
-        public MigratableObjectPresenter(IMigratableView migView, IMigratable migObject)
+        public MigratableObjectPresenter(IMigratable migObject)
         {
 
             migratableObject = migObject;
-            _migView = migView;
             this.Sync();
         }
 
 
-
-        /// <summary>
-        /// Public Constructor, creating a new migratable object
-        /// </summary>
-        [Inject]
-        public MigratableObjectPresenter(IMigratableView migView)
-        {
-            //Setup everything on page load, i.e. create an object to migrate
-            var kernel = new StandardKernel(new MigObjectModule());
-             migratableObject = kernel.Get<IMigratable>();
+        public void RegisterView(IMigratableView migView){
             _migView = migView;
-            this.Sync();
         }
+
+
+
 
 
 
@@ -109,7 +103,10 @@ namespace Playground.Presentation
         {
             SaveToModel();
             LoadFromModel();
-            _migView.Migrated = _migrated; //set the view
+            if (_migView != null)
+            {
+                _migView.Migrated = _migrated; //set the view
+            }
         }
            
         
