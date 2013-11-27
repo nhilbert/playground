@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DinoDetails.aspx.cs" Inherits="WebFront.DinoDetails" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DinoDetails.aspx.cs" Inherits="Playground.WebFront.DinoDetails" %>
 
 <!DOCTYPE html>
 

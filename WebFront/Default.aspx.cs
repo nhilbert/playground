@@ -18,6 +18,11 @@ namespace Playground.WebFront
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (myPresentation == null)
+            {
+                myPresentation = PresenterFactory.GetIMigratableObjectPresenter();
+            }
+            
             myPresentation.RegisterView(this);
         }
 

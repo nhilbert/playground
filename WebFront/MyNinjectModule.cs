@@ -8,10 +8,11 @@ using Playground.Model;
 
 namespace Playground.Presentation
 {
-    public class MigObjectModule:NinjectModule
+    public class MyNinjectModule:NinjectModule
     {
         public override void Load()
         {
+            Bind<IMigratableObjectPresenter>().To<MigratableObjectPresenter>();
             Bind<IMigratable>().To<Dinosaur>();
         }
     }

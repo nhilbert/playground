@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DinosaurCard.ascx.cs" Inherits="WebFront.DinosaurCard" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DinosaurCard.ascx.cs" Inherits="Playground.WebFront.DinosaurCard" %>
 <link href="Master.css" rel="stylesheet" />
 
 <div id="DinoCard" class="DinoCardDiv">

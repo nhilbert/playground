@@ -49,7 +49,6 @@
     <Compile Include="IMigratableView.cs" />
     <Compile Include="ICardPresenter.cs" />
     <Compile Include="IMigratableObjectPresenter.cs" />
-    <Compile Include="MigObjectModule.cs" />
     <Compile Include="MigratableObjectPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

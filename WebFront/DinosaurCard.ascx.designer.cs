@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebFront {
+namespace Playground.WebFront {
     
     
     public partial class DinosaurCard {
