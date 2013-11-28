@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Dinosaur.cs" />
     <Compile Include="IMigratable.cs" />
+    <Compile Include="ICardable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Species.cs" />
   </ItemGroup>

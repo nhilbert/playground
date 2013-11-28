@@ -1,0 +1,21 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SpeciesCard.aspx.cs" Inherits="Playground.WebFront.DinoDetails" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        <asp:Image ID="SpeciesImage" runat="server" />
+        <asp:Label ID="SpeciesName" runat="server" Text="Name"></asp:Label>
+    
+        <asp:Button ID="NextButton" runat="server" Text="Next" OnClick="NextButton_Click" />
+    
+    </div>
+    </form>
+</body>
+</html>

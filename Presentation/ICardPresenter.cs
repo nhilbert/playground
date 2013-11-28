@@ -8,5 +8,8 @@ namespace Playground.Presentation
 {
     public interface ICardPresenter
     {
+        void RegisterView(ICardView migView);
+        void Next();
+
     }
 }

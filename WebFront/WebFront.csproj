@@ -74,7 +74,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DinoDetails.aspx" />
+    <Content Include="SpeciesCard.aspx" />
     <Content Include="DinosaurCard.ascx" />
     <Content Include="Global.asax" />
     <Content Include="images\Abrictosaurus.png" />
@@ -107,12 +107,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DinoDetails.aspx.cs">
-      <DependentUpon>DinoDetails.aspx</DependentUpon>
+    <Compile Include="SpeciesCard.aspx.cs">
+      <DependentUpon>SpeciesCard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DinoDetails.aspx.designer.cs">
-      <DependentUpon>DinoDetails.aspx</DependentUpon>
+    <Compile Include="SpeciesCard.aspx.designer.cs">
+      <DependentUpon>SpeciesCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="DinosaurCard.ascx.cs">
       <DependentUpon>DinosaurCard.ascx</DependentUpon>
@@ -136,9 +136,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{507e900e-bdec-4d20-92eb-0a51266d0868}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{45322cb4-ab95-4304-b101-4339026fad3b}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSSQLDataAccess\MSSQLDataAccess.csproj">
+      <Project>{06df1856-5cdb-4a82-9329-a269b2754962}</Project>
+      <Name>MSSQLDataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Presentation\Presentation.csproj">
       <Project>{e641539e-d201-4c86-8db4-07aaec784af9}</Project>

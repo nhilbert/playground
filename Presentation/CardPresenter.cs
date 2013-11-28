@@ -8,12 +8,13 @@ using Playground.Model;
 
 namespace Playground.Presentation
 {
-    class CardPresenter
+    public class CardPresenter:ICardPresenter
     {
         /// <summary>
-        /// the Migration-Object to present
+        /// the Migration-Objects to present
         /// </summary>
-        private IMigratable migratableObject;
+        protected List<ICardable> _cardObjects;
+        private List<ICardable>.Enumerator _cardEnumerator;
 
         /// <summary>
         /// The View
@@ -23,14 +24,22 @@ namespace Playground.Presentation
         //all relevant data for presentation
 
         /// <summary>
-        /// Whether or not the presenter shows something migrated
+        /// The stuff the presenter currently shows
         /// </summary>
         protected String _name;
         protected String _imageURL;
 
         [Inject]
-        public CardPresenter(IMigratable migObject){
-            migratableObject = migObject;
+        public CardPresenter(List<ICardable> cardObjects)
+        {
+            _cardObjects = cardObjects;
+            _cardEnumerator = _cardObjects.GetEnumerator();
+            _cardEnumerator.MoveNext();
+        }
+
+        protected void ResetEnumerator(){
+            _cardEnumerator = _cardObjects.GetEnumerator();
+            _cardEnumerator.MoveNext();
         }
 
 
@@ -43,13 +52,14 @@ namespace Playground.Presentation
 
         public void LoadFromModel()
         {
-            _name = migratableObject.name;
-            _imageURL = migratableObject.imageURL;
+            _name = _cardEnumerator.Current.Name;
+            _imageURL = _cardEnumerator.Current.ImageURL;
         }
 
         public void SaveToModel()
         {
-            migratableObject.name = _name;
+            _cardEnumerator.Current.Name = _name;
+            _cardEnumerator.Current.ImageURL = _imageURL;
         }
 
         public void Sync()
@@ -57,7 +67,21 @@ namespace Playground.Presentation
             SaveToModel();
             LoadFromModel();
             _view.Name = _name; //set the view
+            _view.ImageURL = _imageURL; //set the view
         }
-           
+
+
+
+        public void Next()
+        {
+            if (_cardEnumerator.MoveNext())
+            {
+                LoadFromModel();
+                SaveToModel();
+                _view.Name = _name; //set the view
+                _view.ImageURL = _imageURL; //set the view
+            }
+        }
+
     }
 }

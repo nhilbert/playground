@@ -5,6 +5,7 @@ using System.Web;
 using Ninject;
 using Ninject.Modules;
 using Playground.Model;
+using Playground.DataAccess;
 
 namespace Playground.Presentation
 {
@@ -14,6 +15,8 @@ namespace Playground.Presentation
         {
             Bind<IMigratableObjectPresenter>().To<MigratableObjectPresenter>();
             Bind<IMigratable>().To<Dinosaur>();
+            Bind<IDinoPicker>().To<DummyPicker>();
+            Bind<ICardPresenter>().To<SpeciesPresenter>();
         }
     }
 }

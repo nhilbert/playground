@@ -10,6 +10,9 @@ namespace Playground.Model
     /// </summary>
     public class Dinosaur:IMigratable
     {
+        public Dinosaur() { }
+
+        public Dinosaur(String aname) {name=aname;}
 
         public bool migrated
         {
